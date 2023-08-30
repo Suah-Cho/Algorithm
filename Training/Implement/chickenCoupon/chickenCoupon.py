@@ -1,17 +1,14 @@
 def solution(chicken):
-    
     answer = 0
-    coupon = chicken
 
-    while coupon > 9 :
+    while chicken >= 10 :
         service = chicken // 10
-        coupon += service % 10
+        rest = chicken % 10
         answer += service
-        print("counpon = {}".format(coupon))
+        chicken = service + rest
 
+    return answer 
 
-
-    return answer
-
-print(solution(100))
-print(solution(1081))
+# 예시 입력에 대한 출력
+print(solution(100))    # 출력: 11
+print(solution(1081))   # 출력: 120
