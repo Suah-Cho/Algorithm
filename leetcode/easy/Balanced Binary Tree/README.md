@@ -4,14 +4,14 @@ height-balanced.
 
 Example 1:
 
-<img src='..\balance_1.jpg'></img>
+<img src='/leetcode/easy/Balanced Binary Tree/balance_1.jpg'></img>
 
 Input: root = [3,9,20,null,null,15,7]
 Output: true
 
 Example 2:
 
-<img src='..\balance_2.jpg'></img>
+<img src='/leetcode/easy/Balanced Binary Tree/balance_1.jpg'></img>
 
 Input: root = [1,2,2,3,3,null,null,4,4]
 Output: false
