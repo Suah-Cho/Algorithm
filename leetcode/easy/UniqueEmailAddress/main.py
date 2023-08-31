@@ -5,10 +5,8 @@ class Solution:
         count = 0
         finemail = []
         for emaillist in emails :
-            print("email = {}".format(emaillist))
             local, domain = emaillist.split('@')[0], emaillist.split('@')[1]
             # local
-            print("before local = {}, domain = {}".format(local, domain))
             if '.' in local :
                 local = local.replace('.', '')
             if '+' in local :
@@ -17,11 +15,9 @@ class Solution:
             
             # domain은 할 필요 x -> '.', '+'둘다 아무 적용이 없기 때문에
 
-            print("after local = {}, domain = {}".format(local, domain))
             finemail.append(local+'@'+domain)
 
         result = list(set(finemail))
-        print('result = {}'.format(result))
         return len(result)
 
 sol = Solution()
