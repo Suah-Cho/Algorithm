@@ -1,4 +1,3 @@
-# Definition for singly-linked list.
 
 from typing import Optional
 
@@ -17,7 +16,7 @@ class Solution:
 
         resultStr = int(''.join(str(e) for e in a)) + int(''.join(str(e) for e in b))
         
-        # 최종 계싼 결과 연결 리스트 변환
+        # 최종 계산 결과 연결 리스트 변환
         return self.ToReverseLinkedList(str(resultStr))
 
 
@@ -48,10 +47,3 @@ class Solution:
             prev = node
         return node
     
-sol = Solution()
-l1 = ListNode()
-
-
-
-
-print(sol.addTwoNumbers())

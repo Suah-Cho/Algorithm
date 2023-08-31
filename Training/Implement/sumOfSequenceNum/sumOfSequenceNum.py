@@ -2,10 +2,8 @@ def solution(num, total):
     answer = []
 
     n = total // num
-    print(n)
     startNum = n - num//2
     finshNum = n + num//2
-    print(startNum, finshNum)
     
     if num % 2 != 0 :
         for num in range(startNum, finshNum + 1) :

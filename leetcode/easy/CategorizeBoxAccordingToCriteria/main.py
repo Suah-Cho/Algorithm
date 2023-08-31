@@ -8,7 +8,6 @@ class Solution:
         category = []
 
         volume = length * width * height
-        # size = 4 * (length + width + height)
         dem = max(length, width, height)
 
 
