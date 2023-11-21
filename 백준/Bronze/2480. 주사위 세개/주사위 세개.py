@@ -1,18 +1,14 @@
 a, b, c = map(int, input().split())
-A = (a == b)
-B = (b == c)
-C = (a == c)
-sameNumber = 0
 
-if A or C :
+if (a == b) or (a == c) :
     sameNumber = a
 else :
     sameNumber = b
 
 
-if A and B and C:
+if (a == b) and (b == c) and (a == c):
     print(10000 + sameNumber * 1000)
-elif A or B or C :
+elif (a == b) or (b == c) or (a == c) :
     print(1000 + sameNumber * 100)
 else :
     print(max(a, b, c) * 100)
