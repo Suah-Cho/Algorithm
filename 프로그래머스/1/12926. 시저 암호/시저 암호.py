@@ -1,19 +1,19 @@
 def solution(s, n):
     answer = ''
     
-    for i in s:
-        if i.islower():
-            if ord(i) + n < 123:
-                answer += chr(ord(i) + n)
+    for c in s:
+        if c.islower():
+            if ord(c) + n < 123:
+                answer += chr(ord(c) + n)
             else :
-                answer += chr(ord(i) + n - 26)
-        elif i.isupper():
-            if ord(i) + n < 91:
-                answer += chr(ord(i) + n)
+                answer += chr(ord(c) + n - 26)
+        elif c.isupper():
+            if ord(c) + n < 90:
+                answer += chr(ord(c) + n)
             else:
-                answer += chr(ord(i) + n -26)
-        elif i == ' ':
-            answer += i
+                answer += chr(ord(c) + n -26)
+        else:
+            answer += c
             
     return answer
     
