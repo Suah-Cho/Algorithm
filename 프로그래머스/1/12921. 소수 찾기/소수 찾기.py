@@ -1,12 +1,19 @@
+import math
+
 def solution(n):
-    answer = []
+    answer = []  
+    array = [True for i in range(n + 1)]
     
-    for i in range(2, n+1):
-        count = 0
-        for j in range(1, i+1):
-            if i % j == 0:
-                count += 1
-        if count == 2:
-            answer.append(i)
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if array[i] == True:
+            j = 2
+            while i * j <= n:
+                array[i * j] = False
+                j += 1
+    
+    for prime in range(2, n + 1):
+        if array[prime]:
+            answer.append(prime)
+
 
     return len(answer)
