@@ -3,23 +3,16 @@
 import math
 
 def solution(number, limit, power):
-    answer = 0
     
+    attack = []
     for num in range(1, number + 1):
-        answer += get_divisor(num, limit, power)
-        
-    return answer
+        divisor = []
+        for i in range(1, (num // 2) + 1):
+            if num % i == 0:
+                divisor.append(i)
+        divisor.append(num)
+        attack.append(len(divisor))
 
-def get_divisor(n, limit, power):
-    divisors = []
+    attack = [power if x > limit else x for x in attack]
     
-    for i in range(1, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            divisors.append(i)
-            if i != n // i:
-                divisors.append(n // i)
-    
-    if len(divisors) > limit:
-        return power
-    
-    return len(divisors)
+    return sum(attack)
