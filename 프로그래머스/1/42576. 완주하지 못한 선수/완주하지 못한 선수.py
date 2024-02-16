@@ -1,6 +1,7 @@
 # 2월 16일 상
 
 def solution(participant, completion):
+    answer = ''
     part_dict = {}
     num = 0
     
@@ -8,10 +9,17 @@ def solution(participant, completion):
         part_dict[hash(part)] = part
         num += hash(part)
     
+    print(part_dict)
+    print(num)
+    
     for com in completion:
         num -= hash(com)
+        
+    print(num)
+           
     
-    return part_dict[num]
+    
+    return answer
 
 #     효율성 0 점
 #     participants = {part : participant.count(part) for part in participant}
