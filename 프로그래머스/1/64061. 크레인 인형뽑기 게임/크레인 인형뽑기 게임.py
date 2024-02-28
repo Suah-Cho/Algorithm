@@ -2,21 +2,21 @@
 
 def solution(board, moves):
     answer = 0
-    basket = []
+    bucket = []
     
     for i in moves:
-        for j in range(len(board)):
+        for j in range(5):
             if board[j][i - 1] != 0:
-                if not basket:
-                    basket.append(board[j][i - 1])
+                if not bucket:
+                    bucket.append(board[j][i - 1])
                     board[j][i - 1] = 0
                 else:
-                    if basket[-1] == board[j][i - 1]:
-                        basket.pop()
+                    if bucket[-1] == board[j][i - 1]:
+                        bucket.pop()
                         board[j][i - 1] = 0
                         answer += 2
                     else:
-                        basket.append(board[j][i - 1])
+                        bucket.append(board[j][i - 1])
                         board[j][i - 1] = 0
                 break
     
