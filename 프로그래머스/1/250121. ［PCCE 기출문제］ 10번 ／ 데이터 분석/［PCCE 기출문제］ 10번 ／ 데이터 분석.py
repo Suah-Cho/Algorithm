@@ -11,9 +11,13 @@ def solution(data, ext, val_ext, sort_by):
     # [[code, date, mzximum, remain], [code, date, mzximum, remain]]
     
     r = extract_data(d[ext], data, val_ext, sort_by)
-    # print(sorted(r, key = lambda x: x[d[sort_by]]))
+    print(r)
     
-    return sorted(r, key = lambda x: x[d[sort_by]])
+    
+    print(r.sort())
+    
+    
+    return answer
 
 def extract_data(num, data, val_ext, sort_by):
     # print(num, data, val_ext)
@@ -24,3 +28,12 @@ def extract_data(num, data, val_ext, sort_by):
             r.append(d)
         
     return r
+
+# .sort(key=lambda x:x[sort_by], reverse=True)
+    # print(ext, sort_by)
+    # print(datetime.datetime.strptime(str(val_ext), '%Y%m%d'))
+
+# if datetime.datetime.strptime(str(20240310), '%Y%m%d') > datetime.datetime.strptime(str(val_ext), '%Y%m%d'):
+    #     print("val이 작음")
+    # else:
+    #     print("val이 큼")
