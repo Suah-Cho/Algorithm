@@ -2,9 +2,24 @@
 
 def solution(word):
     answer = 0
-    words = ['A', 'E', 'I', 'O', 'U']
     
-    for i, w in enumerate(word):
-        answer += words.index(w) * (5 ** (5- i) - 1) // 4 + 1
+    words = ['A', 'E', 'I', 'O', 'U']
+    stack = []
+    
+    for i in range(len(word)):
+        print(word[i])
+        
+        print(stack)
+        if not stack or word[i] == stack[-1]:
+            stack.append(word[i])
+            continue
+        else:
+            idx = words.index(word[i])
+            print(idx, idx * 5 + len(stack), len(stack))
+            stack = []
+        
+        
+        stack.append(word[i])
+    
     
     return answer
